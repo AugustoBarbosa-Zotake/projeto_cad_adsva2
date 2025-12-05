@@ -63,5 +63,15 @@ Module Module1
             Exit Sub
         End Try
     End Sub
-
+    Sub limpar_login()
+        Try
+            With frm_login
+                .txt_usuario.Clear()
+                .txt_senha.Clear()
+                .txt_usuario.Focus()
+            End With
+        Catch ex As Exception
+            Exit Sub
+        End Try
+    End Sub
 End Module

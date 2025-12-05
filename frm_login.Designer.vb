@@ -28,19 +28,20 @@ Partial Class frm_login
         Me.Label2 = New System.Windows.Forms.Label()
         Me.txt_usuario = New System.Windows.Forms.MaskedTextBox()
         Me.btn_entrar = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'txt_senha
         '
-        Me.txt_senha.Location = New System.Drawing.Point(198, 158)
+        Me.txt_senha.Location = New System.Drawing.Point(298, 185)
         Me.txt_senha.Name = "txt_senha"
         Me.txt_senha.Size = New System.Drawing.Size(147, 20)
-        Me.txt_senha.TabIndex = 5
+        Me.txt_senha.TabIndex = 2
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(195, 95)
+        Me.Label1.Location = New System.Drawing.Point(295, 122)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(27, 13)
         Me.Label1.TabIndex = 6
@@ -49,7 +50,7 @@ Partial Class frm_login
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(195, 142)
+        Me.Label2.Location = New System.Drawing.Point(295, 169)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(38, 13)
         Me.Label2.TabIndex = 7
@@ -57,27 +58,39 @@ Partial Class frm_login
         '
         'txt_usuario
         '
-        Me.txt_usuario.Location = New System.Drawing.Point(198, 111)
+        Me.txt_usuario.Location = New System.Drawing.Point(298, 138)
         Me.txt_usuario.Mask = "999,999,999-99"
         Me.txt_usuario.Name = "txt_usuario"
         Me.txt_usuario.Size = New System.Drawing.Size(147, 20)
-        Me.txt_usuario.TabIndex = 8
+        Me.txt_usuario.TabIndex = 1
         Me.txt_usuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'btn_entrar
         '
-        Me.btn_entrar.Location = New System.Drawing.Point(225, 200)
+        Me.btn_entrar.Location = New System.Drawing.Point(324, 225)
         Me.btn_entrar.Name = "btn_entrar"
         Me.btn_entrar.Size = New System.Drawing.Size(93, 23)
-        Me.btn_entrar.TabIndex = 9
+        Me.btn_entrar.TabIndex = 3
         Me.btn_entrar.Text = "Acessar conta"
         Me.btn_entrar.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(333, 263)
+        Me.Button1.Name = "Button1"
+        Me.Button1.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.TabIndex = 8
+        Me.Button1.Text = "Cadastrar-se"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'frm_login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.Window
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btn_entrar)
         Me.Controls.Add(Me.txt_usuario)
         Me.Controls.Add(Me.Label2)
@@ -85,7 +98,7 @@ Partial Class frm_login
         Me.Controls.Add(Me.txt_senha)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "frm_login"
-        Me.Text = "frm_login"
+        Me.Text = "MEDLINK"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -95,4 +108,5 @@ Partial Class frm_login
     Friend WithEvents Label2 As Label
     Friend WithEvents txt_usuario As MaskedTextBox
     Friend WithEvents btn_entrar As Button
+    Friend WithEvents Button1 As Button
 End Class

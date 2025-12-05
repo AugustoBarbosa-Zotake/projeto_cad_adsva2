@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txt_cpf = New System.Windows.Forms.MaskedTextBox()
@@ -34,24 +35,6 @@ Partial Class Form1
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txt_email = New System.Windows.Forms.TextBox()
         Me.dgv_dados = New System.Windows.Forms.DataGridView()
-        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.btn_gravar = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
-        Me.txt_buscar = New System.Windows.Forms.ToolStripTextBox()
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
-        Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
-        Me.cmb_campo = New System.Windows.Forms.ToolStripComboBox()
-        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
-        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
-        Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.DataGridViewImageColumn2 = New System.Windows.Forms.DataGridViewImageColumn()
-        Me.img_foto = New System.Windows.Forms.PictureBox()
-        Me.txt_senha = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.cmb_cargo = New System.Windows.Forms.ComboBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.cmb_status = New System.Windows.Forms.ComboBox()
-        Me.Label8 = New System.Windows.Forms.Label()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -59,17 +42,44 @@ Partial Class Form1
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
+        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
+        Me.txt_buscar = New System.Windows.Forms.ToolStripTextBox()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
+        Me.cmb_campo = New System.Windows.Forms.ToolStripComboBox()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.txt_senha = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.cmb_cargo = New System.Windows.Forms.ComboBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.cmb_status = New System.Windows.Forms.ComboBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.ContextMenuStrip2 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.MEDLINKToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DesconectarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SairToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DataGridViewImageColumn1 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.DataGridViewImageColumn2 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.btn_gravar = New System.Windows.Forms.ToolStripButton()
         Me.Column5 = New System.Windows.Forms.DataGridViewImageColumn()
         Me.Column6 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.img_foto = New System.Windows.Forms.PictureBox()
+        Me.GerarRelatórioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.dgv_dados, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
+        Me.MenuStrip1.SuspendLayout()
         CType(Me.img_foto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 29)
+        Me.Label1.Location = New System.Drawing.Point(9, 54)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(98, 13)
         Me.Label1.TabIndex = 0
@@ -77,7 +87,7 @@ Partial Class Form1
         '
         'txt_cpf
         '
-        Me.txt_cpf.Location = New System.Drawing.Point(15, 46)
+        Me.txt_cpf.Location = New System.Drawing.Point(12, 71)
         Me.txt_cpf.Mask = "999,999,999-99"
         Me.txt_cpf.Name = "txt_cpf"
         Me.txt_cpf.Size = New System.Drawing.Size(100, 20)
@@ -87,7 +97,7 @@ Partial Class Form1
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(154, 30)
+        Me.Label2.Location = New System.Drawing.Point(151, 55)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(110, 13)
         Me.Label2.TabIndex = 2
@@ -95,15 +105,15 @@ Partial Class Form1
         '
         'txt_nome
         '
-        Me.txt_nome.Location = New System.Drawing.Point(157, 46)
+        Me.txt_nome.Location = New System.Drawing.Point(154, 71)
         Me.txt_nome.Name = "txt_nome"
         Me.txt_nome.Size = New System.Drawing.Size(317, 20)
-        Me.txt_nome.TabIndex = 3
+        Me.txt_nome.TabIndex = 2
         '
         'cmb_data_nasc
         '
         Me.cmb_data_nasc.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.cmb_data_nasc.Location = New System.Drawing.Point(274, 103)
+        Me.cmb_data_nasc.Location = New System.Drawing.Point(271, 128)
         Me.cmb_data_nasc.Name = "cmb_data_nasc"
         Me.cmb_data_nasc.Size = New System.Drawing.Size(200, 20)
         Me.cmb_data_nasc.TabIndex = 4
@@ -111,7 +121,7 @@ Partial Class Form1
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(271, 84)
+        Me.Label3.Location = New System.Drawing.Point(268, 109)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(128, 13)
         Me.Label3.TabIndex = 5
@@ -119,17 +129,17 @@ Partial Class Form1
         '
         'txt_fone
         '
-        Me.txt_fone.Location = New System.Drawing.Point(15, 165)
+        Me.txt_fone.Location = New System.Drawing.Point(12, 190)
         Me.txt_fone.Mask = "+55 (99) 99999-9999"
         Me.txt_fone.Name = "txt_fone"
         Me.txt_fone.Size = New System.Drawing.Size(116, 20)
-        Me.txt_fone.TabIndex = 7
+        Me.txt_fone.TabIndex = 5
         Me.txt_fone.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(12, 148)
+        Me.Label4.Location = New System.Drawing.Point(9, 173)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(109, 13)
         Me.Label4.TabIndex = 6
@@ -138,7 +148,7 @@ Partial Class Form1
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(156, 148)
+        Me.Label5.Location = New System.Drawing.Point(153, 173)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(42, 13)
         Me.Label5.TabIndex = 8
@@ -146,10 +156,10 @@ Partial Class Form1
         '
         'txt_email
         '
-        Me.txt_email.Location = New System.Drawing.Point(157, 164)
+        Me.txt_email.Location = New System.Drawing.Point(154, 189)
         Me.txt_email.Name = "txt_email"
         Me.txt_email.Size = New System.Drawing.Size(317, 20)
-        Me.txt_email.TabIndex = 9
+        Me.txt_email.TabIndex = 6
         '
         'dgv_dados
         '
@@ -159,149 +169,11 @@ Partial Class Form1
         Me.dgv_dados.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
         Me.dgv_dados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgv_dados.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column7, Me.Column8, Me.Column9, Me.Column5, Me.Column6})
-        Me.dgv_dados.Location = New System.Drawing.Point(15, 202)
+        Me.dgv_dados.Location = New System.Drawing.Point(12, 227)
         Me.dgv_dados.Name = "dgv_dados"
         Me.dgv_dados.ReadOnly = True
         Me.dgv_dados.Size = New System.Drawing.Size(862, 271)
-        Me.dgv_dados.TabIndex = 11
-        '
-        'ToolStrip1
-        '
-        Me.ToolStrip1.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btn_gravar, Me.ToolStripLabel1, Me.txt_buscar, Me.ToolStripSeparator1, Me.ToolStripLabel2, Me.cmb_campo})
-        Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(884, 25)
-        Me.ToolStrip1.TabIndex = 12
-        Me.ToolStrip1.Text = "ToolStrip1"
-        '
-        'btn_gravar
-        '
-        Me.btn_gravar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.btn_gravar.Image = CType(resources.GetObject("btn_gravar.Image"), System.Drawing.Image)
-        Me.btn_gravar.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.btn_gravar.Name = "btn_gravar"
-        Me.btn_gravar.Size = New System.Drawing.Size(23, 22)
-        Me.btn_gravar.Text = "ToolStripButton1"
-        Me.btn_gravar.ToolTipText = "Gravar e Editar"
-        '
-        'ToolStripLabel1
-        '
-        Me.ToolStripLabel1.Name = "ToolStripLabel1"
-        Me.ToolStripLabel1.Size = New System.Drawing.Size(182, 22)
-        Me.ToolStripLabel1.Text = "Digite um parametro de pesquisa"
-        '
-        'txt_buscar
-        '
-        Me.txt_buscar.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.txt_buscar.Name = "txt_buscar"
-        Me.txt_buscar.Size = New System.Drawing.Size(100, 25)
-        '
-        'ToolStripSeparator1
-        '
-        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
-        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
-        '
-        'ToolStripLabel2
-        '
-        Me.ToolStripLabel2.Name = "ToolStripLabel2"
-        Me.ToolStripLabel2.Size = New System.Drawing.Size(118, 22)
-        Me.ToolStripLabel2.Text = "Selecione um campo"
-        '
-        'cmb_campo
-        '
-        Me.cmb_campo.Name = "cmb_campo"
-        Me.cmb_campo.Size = New System.Drawing.Size(121, 25)
-        '
-        'StatusStrip1
-        '
-        Me.StatusStrip1.BackColor = System.Drawing.SystemColors.ControlDark
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 476)
-        Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(884, 22)
-        Me.StatusStrip1.TabIndex = 13
-        Me.StatusStrip1.Text = "StatusStrip1"
-        '
-        'OpenFileDialog1
-        '
-        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
-        '
-        'DataGridViewImageColumn1
-        '
-        Me.DataGridViewImageColumn1.HeaderText = "EDITAR"
-        Me.DataGridViewImageColumn1.Image = Global.projeto_cad_adsva2.My.Resources.Resources.edit
-        Me.DataGridViewImageColumn1.Name = "DataGridViewImageColumn1"
-        Me.DataGridViewImageColumn1.Width = 53
-        '
-        'DataGridViewImageColumn2
-        '
-        Me.DataGridViewImageColumn2.HeaderText = "EXCLUIR"
-        Me.DataGridViewImageColumn2.Image = Global.projeto_cad_adsva2.My.Resources.Resources.delete
-        Me.DataGridViewImageColumn2.Name = "DataGridViewImageColumn2"
-        Me.DataGridViewImageColumn2.Width = 59
-        '
-        'img_foto
-        '
-        Me.img_foto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.img_foto.Image = CType(resources.GetObject("img_foto.Image"), System.Drawing.Image)
-        Me.img_foto.Location = New System.Drawing.Point(679, 45)
-        Me.img_foto.Name = "img_foto"
-        Me.img_foto.Size = New System.Drawing.Size(100, 124)
-        Me.img_foto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.img_foto.TabIndex = 10
-        Me.img_foto.TabStop = False
-        '
-        'txt_senha
-        '
-        Me.txt_senha.Location = New System.Drawing.Point(15, 103)
-        Me.txt_senha.Name = "txt_senha"
-        Me.txt_senha.Size = New System.Drawing.Size(211, 20)
-        Me.txt_senha.TabIndex = 14
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(12, 84)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(44, 13)
-        Me.Label6.TabIndex = 15
-        Me.Label6.Text = "SENHA"
-        '
-        'cmb_cargo
-        '
-        Me.cmb_cargo.FormattingEnabled = True
-        Me.cmb_cargo.Items.AddRange(New Object() {"Administrador", "Médico(a)", "Enfêrmeiro(a)", "Recepcionista", "Paciente"})
-        Me.cmb_cargo.Location = New System.Drawing.Point(511, 45)
-        Me.cmb_cargo.Name = "cmb_cargo"
-        Me.cmb_cargo.Size = New System.Drawing.Size(121, 21)
-        Me.cmb_cargo.TabIndex = 16
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(508, 30)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(116, 13)
-        Me.Label7.TabIndex = 17
-        Me.Label7.Text = "CARGO DO USUARIO"
-        '
-        'cmb_status
-        '
-        Me.cmb_status.FormattingEnabled = True
-        Me.cmb_status.Items.AddRange(New Object() {"Ativo", "Bloqueado"})
-        Me.cmb_status.Location = New System.Drawing.Point(511, 102)
-        Me.cmb_status.Name = "cmb_status"
-        Me.cmb_status.Size = New System.Drawing.Size(121, 21)
-        Me.cmb_status.TabIndex = 18
-        '
-        'Label8
-        '
-        Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(508, 86)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(50, 13)
-        Me.Label8.TabIndex = 19
-        Me.Label8.Text = "STATUS"
+        Me.dgv_dados.TabIndex = 9
         '
         'Column1
         '
@@ -352,6 +224,178 @@ Partial Class Form1
         Me.Column9.ReadOnly = True
         Me.Column9.Width = 75
         '
+        'ToolStrip1
+        '
+        Me.ToolStrip1.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btn_gravar, Me.ToolStripLabel1, Me.txt_buscar, Me.ToolStripSeparator1, Me.ToolStripLabel2, Me.cmb_campo})
+        Me.ToolStrip1.Location = New System.Drawing.Point(0, 24)
+        Me.ToolStrip1.Name = "ToolStrip1"
+        Me.ToolStrip1.Size = New System.Drawing.Size(884, 25)
+        Me.ToolStrip1.TabIndex = 12
+        Me.ToolStrip1.Text = "ToolStrip1"
+        '
+        'ToolStripLabel1
+        '
+        Me.ToolStripLabel1.Name = "ToolStripLabel1"
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(182, 22)
+        Me.ToolStripLabel1.Text = "Digite um parametro de pesquisa"
+        '
+        'txt_buscar
+        '
+        Me.txt_buscar.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txt_buscar.Name = "txt_buscar"
+        Me.txt_buscar.Size = New System.Drawing.Size(100, 25)
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
+        '
+        'ToolStripLabel2
+        '
+        Me.ToolStripLabel2.Name = "ToolStripLabel2"
+        Me.ToolStripLabel2.Size = New System.Drawing.Size(118, 22)
+        Me.ToolStripLabel2.Text = "Selecione um campo"
+        '
+        'cmb_campo
+        '
+        Me.cmb_campo.Name = "cmb_campo"
+        Me.cmb_campo.Size = New System.Drawing.Size(121, 25)
+        '
+        'StatusStrip1
+        '
+        Me.StatusStrip1.BackColor = System.Drawing.SystemColors.ControlDark
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 501)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(884, 22)
+        Me.StatusStrip1.TabIndex = 13
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
+        'txt_senha
+        '
+        Me.txt_senha.Location = New System.Drawing.Point(12, 128)
+        Me.txt_senha.Name = "txt_senha"
+        Me.txt_senha.Size = New System.Drawing.Size(211, 20)
+        Me.txt_senha.TabIndex = 3
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(9, 109)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(44, 13)
+        Me.Label6.TabIndex = 15
+        Me.Label6.Text = "SENHA"
+        '
+        'cmb_cargo
+        '
+        Me.cmb_cargo.FormattingEnabled = True
+        Me.cmb_cargo.Items.AddRange(New Object() {"Administrador", "Médico(a)", "Enfêrmeiro(a)", "Recepcionista", "Paciente"})
+        Me.cmb_cargo.Location = New System.Drawing.Point(508, 70)
+        Me.cmb_cargo.Name = "cmb_cargo"
+        Me.cmb_cargo.Size = New System.Drawing.Size(121, 21)
+        Me.cmb_cargo.TabIndex = 7
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(505, 55)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(116, 13)
+        Me.Label7.TabIndex = 17
+        Me.Label7.Text = "CARGO DO USUARIO"
+        '
+        'cmb_status
+        '
+        Me.cmb_status.FormattingEnabled = True
+        Me.cmb_status.Items.AddRange(New Object() {"Ativo", "Bloqueado"})
+        Me.cmb_status.Location = New System.Drawing.Point(508, 127)
+        Me.cmb_status.Name = "cmb_status"
+        Me.cmb_status.Size = New System.Drawing.Size(121, 21)
+        Me.cmb_status.TabIndex = 8
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(505, 111)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(50, 13)
+        Me.Label8.TabIndex = 19
+        Me.Label8.Text = "STATUS"
+        '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(61, 4)
+        '
+        'ContextMenuStrip2
+        '
+        Me.ContextMenuStrip2.Name = "ContextMenuStrip2"
+        Me.ContextMenuStrip2.Size = New System.Drawing.Size(61, 4)
+        '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MEDLINKToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(884, 24)
+        Me.MenuStrip1.TabIndex = 22
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'MEDLINKToolStripMenuItem
+        '
+        Me.MEDLINKToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuToolStripMenuItem, Me.GerarRelatórioToolStripMenuItem, Me.DesconectarToolStripMenuItem, Me.SairToolStripMenuItem})
+        Me.MEDLINKToolStripMenuItem.Name = "MEDLINKToolStripMenuItem"
+        Me.MEDLINKToolStripMenuItem.Size = New System.Drawing.Size(69, 20)
+        Me.MEDLINKToolStripMenuItem.Text = "MEDLINK"
+        '
+        'MenuToolStripMenuItem
+        '
+        Me.MenuToolStripMenuItem.Name = "MenuToolStripMenuItem"
+        Me.MenuToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.MenuToolStripMenuItem.Text = "Menu"
+        '
+        'DesconectarToolStripMenuItem
+        '
+        Me.DesconectarToolStripMenuItem.Name = "DesconectarToolStripMenuItem"
+        Me.DesconectarToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.DesconectarToolStripMenuItem.Text = "Desconectar"
+        '
+        'SairToolStripMenuItem
+        '
+        Me.SairToolStripMenuItem.Name = "SairToolStripMenuItem"
+        Me.SairToolStripMenuItem.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.F4), System.Windows.Forms.Keys)
+        Me.SairToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SairToolStripMenuItem.Text = "Sair"
+        '
+        'DataGridViewImageColumn1
+        '
+        Me.DataGridViewImageColumn1.HeaderText = "EDITAR"
+        Me.DataGridViewImageColumn1.Image = Global.projeto_cad_adsva2.My.Resources.Resources.edit
+        Me.DataGridViewImageColumn1.Name = "DataGridViewImageColumn1"
+        Me.DataGridViewImageColumn1.Width = 53
+        '
+        'DataGridViewImageColumn2
+        '
+        Me.DataGridViewImageColumn2.HeaderText = "EXCLUIR"
+        Me.DataGridViewImageColumn2.Image = Global.projeto_cad_adsva2.My.Resources.Resources.delete
+        Me.DataGridViewImageColumn2.Name = "DataGridViewImageColumn2"
+        Me.DataGridViewImageColumn2.Width = 59
+        '
+        'btn_gravar
+        '
+        Me.btn_gravar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.btn_gravar.Image = CType(resources.GetObject("btn_gravar.Image"), System.Drawing.Image)
+        Me.btn_gravar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btn_gravar.Name = "btn_gravar"
+        Me.btn_gravar.Size = New System.Drawing.Size(23, 22)
+        Me.btn_gravar.Text = "ToolStripButton1"
+        Me.btn_gravar.ToolTipText = "Gravar e Editar"
+        '
         'Column5
         '
         Me.Column5.HeaderText = "EDITAR"
@@ -368,11 +412,28 @@ Partial Class Form1
         Me.Column6.ReadOnly = True
         Me.Column6.Width = 59
         '
+        'img_foto
+        '
+        Me.img_foto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.img_foto.Image = CType(resources.GetObject("img_foto.Image"), System.Drawing.Image)
+        Me.img_foto.Location = New System.Drawing.Point(676, 70)
+        Me.img_foto.Name = "img_foto"
+        Me.img_foto.Size = New System.Drawing.Size(100, 124)
+        Me.img_foto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.img_foto.TabIndex = 10
+        Me.img_foto.TabStop = False
+        '
+        'GerarRelatórioToolStripMenuItem
+        '
+        Me.GerarRelatórioToolStripMenuItem.Name = "GerarRelatórioToolStripMenuItem"
+        Me.GerarRelatórioToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.GerarRelatórioToolStripMenuItem.Text = "Gerar relatório"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(884, 498)
+        Me.ClientSize = New System.Drawing.Size(884, 523)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.cmb_status)
         Me.Controls.Add(Me.Label7)
@@ -381,6 +442,7 @@ Partial Class Form1
         Me.Controls.Add(Me.txt_senha)
         Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.ToolStrip1)
+        Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.dgv_dados)
         Me.Controls.Add(Me.img_foto)
         Me.Controls.Add(Me.txt_email)
@@ -394,12 +456,15 @@ Partial Class Form1
         Me.Controls.Add(Me.txt_cpf)
         Me.Controls.Add(Me.Label1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "CADASTRO"
+        Me.Text = "Gerenciar usuários"
         CType(Me.dgv_dados, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         CType(Me.img_foto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -444,4 +509,12 @@ Partial Class Form1
     Friend WithEvents Column9 As DataGridViewTextBoxColumn
     Friend WithEvents Column5 As DataGridViewImageColumn
     Friend WithEvents Column6 As DataGridViewImageColumn
+    Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
+    Friend WithEvents ContextMenuStrip2 As ContextMenuStrip
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents MEDLINKToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MenuToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DesconectarToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SairToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents GerarRelatórioToolStripMenuItem As ToolStripMenuItem
 End Class

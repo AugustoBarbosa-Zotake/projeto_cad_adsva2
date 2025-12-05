@@ -31,7 +31,7 @@ Public Class Form1
             If rs.EOF = True Then
                 SQL = $"insert into tb_clientes_adsva2 (cpf,nome,data_nasc,fone,email,foto,senha,cargo,status) values (
                        '{txt_cpf.Text}','{txt_nome.Text}','{cmb_data_nasc.Value.ToShortDateString}',
-                       '{txt_fone.Text}','{txt_email.Text}','{diretorio}','{txt_senha}','{cmb_cargo.Text}','{cmb_status.Text}')"
+                       '{txt_fone.Text}','{txt_email.Text}','{diretorio}','{txt_senha.Text}','{cmb_cargo.Text}','{cmb_status.Text}')"
                 rs = db.Execute(UCase(SQL))
                 MsgBox("Dados gravados com sucesso!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "AVISO")
 
@@ -98,7 +98,7 @@ Public Class Form1
                         SQL = $"delete from tb_clientes_adsva2 where cpf='{aux_cpf}'"
                         rs = db.Execute(SQL)
                         limpar_cadastro()
-                        carregar_campos()
+                        carregar_dados()
 
                     End If
                 End If
@@ -123,6 +123,48 @@ Public Class Form1
             End If
         Catch ex As Exception
             MsgBox("Erro de processamento!", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "ATENÇÃO")
+        End Try
+    End Sub
+
+    Private Sub btn_menu_Click(sender As Object, e As EventArgs) 
+        Try
+            frm_menu.Show()
+            Me.Hide()
+        Catch ex As Exception
+            MsgBox("Erro ao abrir o Menu", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "ATENÇÃO")
+        End Try
+    End Sub
+
+    Private Sub SairToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SairToolStripMenuItem.Click
+        Try
+            resp = MsgBox("Deseja sair?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "ATENÇÃO")
+            If resp = MsgBoxResult.Yes Then
+                Application.Exit()
+            End If
+        Catch ex As Exception
+            MsgBox("Erro ao carregar", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "ATENÇÃO")
+        End Try
+    End Sub
+
+    Private Sub DesconectarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DesconectarToolStripMenuItem.Click
+        Try
+            resp = MsgBox("Deseja se desconectar?", MsgBoxStyle.Question + MsgBoxStyle.YesNo, "ATENÇÃO")
+            If resp = MsgBoxResult.Yes Then
+                Me.Close()
+                frm_login.Show()
+                limpar_login()
+            End If
+        Catch ex As Exception
+            MsgBox("Erro ao carregar", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "ATENÇÃO")
+        End Try
+    End Sub
+
+    Private Sub MenuToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MenuToolStripMenuItem.Click
+        Try
+            frm_menu.Show()
+            Me.Hide()
+        Catch ex As Exception
+            MsgBox("Erro ao abrir o Menu", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "ATENÇÃO")
         End Try
     End Sub
 End Class
